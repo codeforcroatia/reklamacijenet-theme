@@ -1,96 +1,84 @@
-<% @title = "About" %>
+<% @title = "O projektu" %>
 
 <%= render :partial => 'sidebar' %>
 
 <div id="left_column_flip">
-<h1 id="introduction">Introduction to Reklamacije.net <a href="#introduction">#</a> </h1>
+<h1 id="introduction">O projektu Reklamacije.net</i> <a href="#introduction">#</a> </h1>
+
+<p>
+Portal Reklamacije.net zamišljen je kao središnje mjesto informiranja građana o  potrošačkoj problematici, ali i kao mjesto na kojom će korisnici portala, podnositelji pritužbi, u suradnji s raznim stručnjacima, udrugama, institucijama ili tvrtkama nalaziti konstruktivna rješenja svojih problema.
+</p>
+<p>
+Jedno od temeljnih prava potrošača jest i pravo na informiranje na područja zaštite osnovnih prava potrošača - zaštitu ekonomskih interesa potrošača, zaštitu od opasnosti za život, zdravlje i imovinu, pravnu zaštitu potrošača, informiranje i edukaciju potrošača, udruživanje potrošača u svrhu zaštite njihovih interesa, predstavljanje potrošača i sudjelovanje predstavnika potrošača u radu tijela koja rješavaju pitanja od njihova interesa.
+</p>
+<p>
+Nadamo se da ćemo Reklamacije.net osnažiti potrošačko pravo na informiranje po svim područjima zaštite osnovnih  prava potrošača te ujedno ukazivati na probleme koji nas okružuju i doprinijeti njihovom rješavanju.
+</p>
+<p>
+News portal Reklamacije.net bavi se problematikom proizvoda i usluga na tržištu, a <i><%= site_name %></i> omogućuje slanje prigovora određenom trgovcu ili drugoj pravnoj osobi.
+</p>
+<p>
+S obzirom da ostvarenje prava na reklamaciju doprinosi većoj odgovornosti trgovaca i pružatelja usluga i kvaliteti robe i usluga koju pružaju, ono je važna pretpostavka za sva demokratska društva te sredstvo koje građanima pruža mogućnost da dođu do informacija koje su im potrebne za ostvarivanje njihovih prava. Nadamo se da ćemo, kako kvalitetnim sadržajem na portalu, tako i boljim povezivanjem potrošača i građana s trgovcima i javnim tijelima, značajno doprinijeti poboljšanju kvalitete proizvoda i usluga u Hrvatskoj.
+</p>
+
+<h1 id="portal"><i><%= site_name %></i> <a href="#portal">#</a> </h1>
+
 <dl>
-
-<dt id="purpose">What is Reklamacije.net for? <a href="#purpose">#</a> </dt>
+<dt id="purpose">Čemu služe <i><%= site_name %></i>? <a href="#purpose">#</a> </dt>
 <dd>
 <p>
-To help you find out inside information about the UK Government and UK public bodies.
-The site helps people access information about central government, local government,
-Parliament, the NHS, the armed forces, state funded schools and universities and
-other public authorities.
-</p>
-<p>
-You can also use the site to find out information that regulators hold about businesses,
-charities and other organisations.
+Da bi Vam pomogle da izravno pošaljete prigovor na kupljeni proizvod ili pruženu uslugu kod trgovca ili tijelu javne vlasti. Putem ovog portala možete uputiti bilo kakvu vrstu prigovora na sve pravne osobe u Republici Hrvatskoj.
 </p>
 </dd>
 
-<dt id="premise">How does the site work? <a href="#premise">#</a> </dt>
-<dd>You choose the public authority that you would like information from, then
-write a brief note describing what you want to know. We then send your request
-to the public authority. Any response received is automatically published on the
-website for you and anyone else to find and read.
-</dd>
-
-<dt id="whybother_me">Why would I bother to do this? <a href="#whybother_me">#</a> </dt>
-<dd>You pay taxes, and then government does things with the money. All sorts of
-things that affect your life, from health care through to national defence. Some
-it does badly, some it does well. The more we find out about how government
-works, the better able we are to make suggestions to improve the things that
-are done badly, and to celebrate the things that are done well.
-Some people also use the site for research.
-</dd>
-
-<dt id="whybother_them">Why would the public authority bother to reply? <a href="#whybother_them">#</a> </dt>
-<dd>Under Freedom of Information (FOI) law, they have to respond. The response
-will either contain the information you want, or give a valid legal reason why
-it has not been provided.
-</dd>
-
-<dt id="useful">Does useful information get released through the site? <a href="#useful">#</a> </dt>
+<dt id="premise">Kako portal funkcionira? <a href="#premise">#</a> </dt>
 <dd>
-Yes. Thousands of documents have been released through the site.
-See also: <a href="http://www.guardian.co.uk/news/datablog/2012/mar/20/freedom-of-information-foi">366
-Interesting things that we know because of WhatDoTheyKnow</a>.
+Pronađite trgovca ili tijelo javne vlasti kojemu želite uputiti prigovor, te potom u jasnim crtama opišete na što se žalite. Tada ćemo poslati Vaš prigovor trgovcu ili tijelu javne vlasti. Kada oni odgovore, obavijestiti ćemo vas o tome i javiti vam o prekoračenju rokova ako ne odgovore. Svaki zaprimljeni odgovor se automatski objavljuje te ga vi i svi drugi mogu pronaći i pročitati.
 </dd>
 
-<dt id="how_many">How many people use the site? <a href="#how_many">#</a> </dt>
+<dt id="whybother_me">Zašto bi se uopće zamarali ovime? <a href="#whybother_me">#</a> </dt>
 <dd>
-We have over <%= number_with_delimiter(User.count.round(-4), :locale => @locale) %> registered users and around 15% to 20% of requests to UK Central Government are made through the site.
+Osobno se nadamo da ćemo ovim projektom osnažiti potrošačko pravo na informiranje po svim područjima zaštite osnovnih prava potrošača te ujedno ukazivati na probleme koji nas okružuju i doprinijeti njihovom rješavanju. Također, javnim objavljivanjem vlastitog slučaja reklamacije pružate mogućnosti i drugim potrošačima da se upoznaju s vašim slučajem i ukoliko imate valjanje argumente društveno odgovorni trgovci i tijela javne vlasti potruditi će se kvalitetno riješiti Vaš slučaj. 
 </dd>
 
-<dt id="us">Who makes WhatDoTheyKnow? <a href="#us">#</a> </dt>
+<dt id="whybother_them">Zašto bi poduzeća i javna tijela uopće odgovarale na prigovore? <a href="#whybother_them">#</a> </dt>
 <dd>
 <p>
-WhatDoTheyKnow is run and maintained by
-UK Citizens Online Democracy (UKCOD) as part of its
-<a href="http://www.mysociety.org">mySociety</a> project.
-UKCOD is a registered charity in England and Wales (no.
-<a href="http://apps.charitycommission.gov.uk/Showcharity/RegisterOfCharities/CharityWithPartB.aspx?RegisteredCharityNumber=1076346&SubsidiaryNumber=0">1076346</a>).
-UKCOD is also a limited company registered in England and Wales (no.
-<a href="http://opencorporates.com/companies/gb/03277032">03277032</a>)
-and a registered data controller (no.
-<a href="http://www.ico.org.uk/ESDWebPages/DoSearch?reg=182425">Z9602302</a>).
-The <a href="https://www.mysociety.org/about/structure-and-governance/">UKCOD trustees</a> form the governing body of the charity
-and are ultimately responsible for controlling the management and administration of the charity. UKCOD's registered
-office is 483 Green Lanes, London, N13 4BS. UKCOD is not a public body.
+Reklamaciju na proizvod ili uslugu koju ste platili dužan je riješiti trgovac, a ne proizvođač. Trgovci su vam dužni omogućiti podnošenje pisanih prigovora zbog nedostatka proizvoda ili usluge u svojim poslovnim prostorijama ili putem pošte, telefaks uređaja ili elektroničke pošte. Ovaj portal temelji se na transparentnoj elektronskoj komunikaciji. Nakon slanja Vašeg prigovora putem ovog portala, pravna osoba će dobiti na službeni mail Vaš prigovor na koji trgovci ili pružatelji usluga moraju zakonski odgovoriti potrošaču najkasnije u roku od 15 dana.
 </p>
-
 <p>
-The site was initially
-<a href="http://www.mysociety.org/2006/12/06/funding-for-freedom-of-information/">funded by the JRSST
-Charitable Trust</a>.
-</p>
-
-<p>
-If you like what we're doing, then you can
-<a href="https://www.mysociety.org/donate/">make a donation</a>.
+Također, kako je komunikacija javna, svakom je proizvođaču, prodavaču ili pružatelju usluga stalo da se njegovo ime spominje u pozitivnom kontekstu ili da javno i valjano argumentira svoja stajališta po pojedinom slučaju.
 </p>
 </dd>
 
-<dt id="updates">How can I keep up with news about WhatDoTheyKnow?<a href="#updates">#</a> </dt>
-<dd>We have a <a href="<%= blog_path %>">blog</a> and a <a href="http://www.twitter.com/whatdotheyknow">twitter feed</a>.
+<dt id="useful">Da li se korisne informacije objave na portalu? <a href="#useful">#</a> </dt>
+<dd>
+Naravno. Na portalu korisnici u sklopu njihovih prigovora pišu mnogo korisnih iskustava o uslugama ili kupljenim proizvodima.
+</dd>
+
+<dt id="how_many">Koliko ljudi koristi internet za reklamacije? <a href="#how_many">#</a> </dt>
+<dd>
+Portal Reklamacije.net je od kraja 2008. do 2016. posjetilo više od 2 milijuna pojedinaca iz Hrvatske. Novi redizajnirani portal <i><%= site_name %></i> za izravno podnošenje prigovora putem interneta koristi <%= number_with_delimiter(User.count.round(-4), :locale => @locale) %> registriranih korisnika.
+</dd>
+
+<dt id="updates">Kako mogu pratiti novosti vezane uz <i><%= site_name %></i>? <a href="#updates">#</a> </dt>
+<dd>Sve novosti su objavljenje na <a href="http://www.twitter.com/whatdotheyknow">potrošačkom portalu Reklamacije.net</a>.
+</dd>
+
+<dt id="us">Tko uređuje <i><%= site_name %></i>? <a href="#us">#</a> </dt>
+<dd>
+<p>
+Portal uređuju i administriraju volonteri i članovi Instituta za medije (IME).
+</p>
+<p>
+Ovaj portal uspostavlja i tehnički podržava <a href="http://codeforcroatia.org/">HrOpen ekspertna skupina Code for Croatia</a>.
+</p>
 </dd>
 
 
 </dl>
 
-<p><strong>Next</strong>, read about <a href="<%= help_requesting_path %>">making requests</a> --&gt;
+<p><strong>Dalje</strong>, čitajte o tome <a href="<%= help_requesting_path %>">kako podnijeti reklamaciju</a> --&gt;
 
 	<div id="hash_link_padding"></div>
 

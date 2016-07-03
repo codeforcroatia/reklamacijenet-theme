@@ -5,6 +5,9 @@
 <%= foi_error_messages_for :contact %>
 
 <div id="left_column_flip">
+
+    <% if !flash[:notice] %>
+
     <h1 id="contact"><%= @title %> <a href="#contact">#</a> </h1>
     <p> </p>
     
@@ -19,7 +22,6 @@
 
             <li>Ukoliko imate pitanja vezano uz zakonsku regulativu zaštite prava potrošača molimo da pregledate stranice središnjeg portala Reklamacije.net u rubrici Savjeti.</li>
         </ul>
-    
 
     <% end %>
 

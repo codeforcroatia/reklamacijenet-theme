@@ -1,0 +1,92 @@
+<% @title = "Kontaktirajte nas" %>
+
+<%= render :partial => 'sidebar' %>
+
+<%= foi_error_messages_for :contact %>
+
+<div id="left_column_flip">
+    <h1 id="contact"><%= @title %> <a href="#contact">#</a> </h1>
+    <p> </p>
+    
+    <h2 id="email">Kontaktirajte pravnu osobu za službene informacije</h2>
+        <ul>
+            <li><a href="<%= new_request_path %>">Idite ovdje</a> da napišete javni prigovor nekom trgovcu ili pružatelju usluga.</li>
+
+            <li>
+            Za više informacija kako funkcionira portal za elektronsko podnošenje prigovora<i><%= site_name %></i> molimo vas da pokušate pronaći odgovor na stranicama za 
+            <a href="<%= help_requesting_path(:anchor => 'data_protection') %>">pomoć</a>.
+            </li>
+
+            <li>Ukoliko imate pitanja vezano uz zakonsku regulativu zaštite prava potrošača molimo da pregledate stranice središnjeg portala Reklamacije.net u rubrici Savjeti.</li>
+        </ul>
+    
+
+    <% end %>
+
+    <h2>Kontaktirajte <%= site_name %> tim</h2>
+    <% if !flash[:notice] %>
+            <ul>
+            <li>
+            Prije slanja upita o ovom portalu, prvo pročitajte <a href="<%= help_about_path %>">stranice za pomoć</a>, jer ćete tako možda brže doći do odgovora koji tražite.
+            </li>
+
+            <li>Za sva ostala pitanja kontaktirajte nas putem obrasca niže ili putem sljedeće mail adrese <a
+               href="mailto:<%=@contact_email%>"><%=@contact_email%></a>.
+            </li>
+            </ul>
+    <% end %>
+    
+</div>
+
+<%= form_for :contact do |f| %>
+
+    <% if not @user %>
+        <p>
+            <label class="form_label" for="contact_name">Vaše ime:</label>
+            <%= f.text_field :name, :size => 20 %>
+            (or <%= link_to "sign in", signin_url(:r => request.fullpath) %>)
+        </p>
+
+        <p>
+            <label class="form_label" for="contact_email">Vaš email:</label>
+            <%= f.text_field :email, :size => 20 %>
+        </p>
+    <% end %>
+
+    <p>
+        <label class="form_label" for="contact_subject">Naslov:</label>
+        <%= f.text_field :subject, :size => 50 %>
+    </p>
+
+    <p>
+        <label class="form_label" for="contact_message">Poruka:</label>
+        <%= f.text_area :message, :rows => 10, :cols => 60 %>
+    </p>
+
+    <p style="display:none;">
+        <%= f.label :comment, 'Nemojte popuniti ovo polje' %>
+        <%= f.text_field :comment %>
+    </p>
+
+    <% if !@last_request.nil? %>
+        <p>
+            <label class="form_label" for="contact_message">Označite da uključimo poveznicu na prigovor u email:</label>
+            <%=request_link(@last_request) %>
+            <%= submit_tag "remove", :name => 'remove' %>
+        </p>
+    <% end %>
+    <% if !@last_body.nil? %>
+        <p>
+            <label class="form_label" for="contact_message">Označite da uključimo poveznicu na pravnu osobu u email:</label>
+            <%=public_body_link(@last_body) %>
+            <%= submit_tag "remove", :name => 'remove' %>
+        </p>
+    <% end %>
+
+    <div class="form_button">
+        <%= hidden_field_tag(:submitted_contact_form, 1) %>
+        <%= submit_tag "Pošaljite nam poruku", :disable_with => "Šalje se..." %>
+        &lt;-- stranicu pokreću volonteri a ne pravna osoba!
+    </div>
+
+<% end %>

@@ -1,7 +1,5 @@
 <% @title = "Kontaktirajte nas" %>
 
-<%= render :partial => 'sidebar' %>
-
 <%= foi_error_messages_for :contact %>
 
 <div id="left_column_flip">
@@ -16,7 +14,7 @@
             <li><a href="<%= new_request_path %>">Idite ovdje</a> da napišete javni prigovor nekom trgovcu ili pružatelju usluga.</li>
 
             <li>
-            Za više informacija kako funkcionira portal za elektronsko podnošenje prigovora<i><%= site_name %></i> molimo vas da pokušate pronaći odgovor na stranicama za 
+            Za više informacija kako funkcionira portal za elektronsko podnošenje prigovora <i><%= site_name %></i> molimo vas da pokušate pronaći odgovor na stranicama za 
             <a href="<%= help_requesting_path(:anchor => 'data_protection') %>">pomoć</a>.
             </li>
 
@@ -72,14 +70,14 @@
 
     <% if !@last_request.nil? %>
         <p>
-            <label class="form_label" for="contact_message">Označite da uključimo poveznicu na prigovor u email:</label>
+            <label class="form_label" for="contact_message">Poruka će uključiti poveznicu na prigovor:</label>
             <%=request_link(@last_request) %>
             <%= submit_tag "remove", :name => 'remove' %>
         </p>
     <% end %>
     <% if !@last_body.nil? %>
         <p>
-            <label class="form_label" for="contact_message">Označite da uključimo poveznicu na pravnu osobu u email:</label>
+            <label class="form_label" for="contact_message">Poruka će uključiti poveznicu na pravnu osobu:</label>
             <%=public_body_link(@last_body) %>
             <%= submit_tag "remove", :name => 'remove' %>
         </p>
@@ -88,7 +86,6 @@
     <div class="form_button">
         <%= hidden_field_tag(:submitted_contact_form, 1) %>
         <%= submit_tag "Pošaljite nam poruku", :disable_with => "Šalje se..." %>
-        &lt;-- stranicu pokreću volonteri a ne pravna osoba!
     </div>
 
 <% end %>

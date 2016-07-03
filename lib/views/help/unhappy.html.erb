@@ -1,0 +1,78 @@
+<% @title = "Nezadovoljni ste dobivenim odgovorom?" %>
+
+
+<% if !@info_request.nil? %>
+<h3>Nezadovoljni ste odgovorom koji ste dobili za '<%=request_link(@info_request) %>'?
+</h3>
+<% else %>
+<h3>Nezadovoljni ste dobivenim odgovorom na prigovor?</h3>
+<% end %>
+
+<p>Ako...</p>
+
+<ul>
+<li>niste primili odgovor u roku od 15 dana</li>
+<li>niste primili zadovoljavajući odgovor na vašu reklamaciju <strong>ili</strong></li>
+<li>Vaš prigovor je odbijen bez valjanog zakonskog razloga</li>
+</ul>
+
+<p>...možete</p>
+
+<ol>
+<li>Poslati Vaš prigovor na <strong>drugostupanjsku proceduru</strong> kod iste pravne osobe te naslovite na ruke Povjerenstva za reklamacije.</li>
+<li>Pokrenuti postupak kod <strong>Ministarstva gospodarstva</strong>, putem <a href="https://prijava.mingo.hr/CD/prijava.jsp">Centralnog informacijskog sustava za zaštitu potrošača</a>.</li>
+<li>Ako to ne pomogne, savjetujemo da posjetite stranice sa savjetima na središnjem portalu <strong>Reklamacije.net</strong> te da se konzultirate s našim savjetnicima za prava potrošača.</li>
+</ol>
+
+<h1 id="internal_review">1. Drugostupanjska žalba <a class="hover_a" href="#internal_review">#</a> </h1>
+
+<p>
+U slučaju da ste nezadovoljni s odgovorom pravne osobe ili u slučaju da niste dobili odgovor u propisanom roku, možete uputiti novi prigovor toj pravnoj osobi, ali ovaj put naslovljeno na Povjerenstvo za reklamacije.
+</p>
+
+<p>
+U tom slučaju treba poduzeti sljedeće:
+</p>
+
+<ol>
+<% if !@info_request.nil? %>
+    <li><%= link_to "Pošaljite drugostupanjsku žalbu", show_response_no_followup_path(:id => @info_request.id, :incoming_message_id => nil) + "?internal_review=1#followup", :class => 'link_button_green' %>.</li>
+<% else %>
+    <li>Ispod prigovora na stranici <i><%= site_name %></i>, pronađite i kliknite na poveznicu "napišite drugostupanjsku žalbu".</li>
+<% end %>
+<li>Prigovoru priložiti svu potrebnu dokumentaciju (sadržaj prvog prigovora, datum slanja prvog prigovora, odgovor koji ste primili je bilo odgovora, nove dokaze i sl.), te prigovor nasloviti na Povjerenstvo za reklamacije kod te pravne osobe.</li>
+
+<li>Tražite rješavanje vašeg prigovora čim je prije moguće. Bilo bi dobro uključiti i poveznicu na stranicu prigovora kako bi bilo jasno o kojem se točno prigovoru radi.</li>
+
+<li>U roku od 30 dana Povjerenstvo treba razmotriti prigovor, te uputiti odgovor potrošaču.</li>
+</ol>
+
+<h1 id="complaining">2. Nastavljanje postupka kod Ministarstva gospodarstva <a class="hover_a" href="#complaining">#</a> </h1>
+
+<p>Ako ste još uvijek nezadovoljni i nakon što je pravna osoba dostavila odgovor možete se žaliti nadležnom ministarstvu. Kako bi to učinili, 
+<a href="https://www.gov.hr/moja-uprava/pravna-drzava-i-sigurnost/prava-potrosaca/prije-i-nakon-kupnje/reklamacija-proizvoda-i-usluga-s-nedostatkom/183">prvo pročitajte upute za traženje inspekcijskog nadzora</a> na središnjem državnom portalu.
+</p>
+
+<p>Tek nakon što ste dobili negativan odgovor trgovca na Vaš pisani prigovor ili pitanja u vezi svojih prava, putem web aplikacije <a href="https://prijava.mingo.hr/CD/prijava.jsp">Centralni informacijski sustav za zaštitu potrošača</a> možete uputiti zahtjev za inspekcijski nadzor.
+
+<p>Kako biste olakšali slanje relevantne informacije inspektorima, priložite uz Vaš prigovor i
+<% if !@info_request.nil? %>
+    poveznicu na Vaš prigovor
+    <strong><%=h request_url(@info_request) %></strong>
+<% else %>
+    poveznicu na Vaš prigovor na stranici <i><%= site_name %></i>
+<% end %>
+ili ispišite cijelu stranicu s prigovorom i sve priloge.
+</p>
+
+<p>Nakon ispunjavanja i slanja jednostavnog obrasca, sustav će vaš predmet automatski proslijediti Ministarstvu gospodarstva, Savjetovalištu za zaštitu potrošača ili Tržišnoj inspekciji Ministarstva gospodarstva, a vama poslati PIN uz pomoć kojega možete pratiti stanje podnesenog predmeta.</p>
+
+<p><i><%= site_name %></i> nema posebnih sredstava za rukovanje s prigovorima u ovoj fazi — prigovori se nalaze u sustavu nadležnog ministarstva. Međutim, možete ostavljati komentare ispod Vašeg prigovora kako bi informirali ostale o napretku procesa.</p>
+
+<h1 id="other_means">3. Savjetovanje putem portala Reklamacije.net <a class="hover_a" href="#other_means">#</a> </h1>
+
+<p>Potragu za rješenjem Vašeg problema možete nastaviti i na druge načine.</p>
+
+<p>
+Ako ste još uvijek nezadovoljni odgovorom ili uopće niste dobili odogovor portal Reklamacije.net će se potruditi ponuditi Vam besplatne savjete za Vaš slučaj. Na središtenjem portalu <a class="hover_a" href="http://reklamacije.net">Reklamacije.net</a> potražite rubriku <strong>Savjeti</strong> i kontaktirajete naše osoblje. Moguće je da zbog ograničenih resursa savjetnici neće biti na raspolaganju ali svakako savjetujemo ovaj korak prije daljnih akcija koje planirate poduzeti. 
+</p>

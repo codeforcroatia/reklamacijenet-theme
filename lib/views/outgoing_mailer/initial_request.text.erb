@@ -2,12 +2,12 @@
 
 -------------------------------------------------------------------
 
-<%= _('Ovo je pisani prigovor potrošača dostavljen putem {{site_name}} internetske stranice.', :site_name => site_name) %>
+<%= _('Ovo je pisani prigovor potrošača dostavljen putem {{site_name}} internetske usluge.', :site_name => site_name) %>
 
 <%= _('Trgovac je dužan u pisanom obliku odgovoriti na prigovore u roku od 15 dana od dana zaprimljenog prigovora na:')%>
 <%= @info_request.incoming_email %>
 
-<%= _('Je li {{email_address}} pogrešna adresa za podnošenje prigovora za {{public_body_name}}? Molimo vas dojavite primjenu putem linka:', :email_address => @info_request.public_body.request_email, :type_of_request =>  @info_request.law_used_human(:full), :public_body_name => @info_request.public_body.name)%>
+<%= _('Je li {{email_address}} pogrešna adresa za podnošenje prigovora za {{public_body_name}}? Molimo vas dojavite promjenu adrese putem sljedećeg linka:', :email_address => @info_request.public_body.request_email, :type_of_request =>  @info_request.law_used_human(:full), :public_body_name => @info_request.public_body.name)%>
 <%= new_change_request_url(:body => @info_request.public_body.url_name) %>
 
 <%= render :partial => 'followup_footer' %>

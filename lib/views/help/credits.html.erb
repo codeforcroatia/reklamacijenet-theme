@@ -1,23 +1,18 @@
-<<<<<<< HEAD
 <% @title = "Zahvale" %>
-=======
-<% @title = "Credit where credit’s due" %>
->>>>>>> mysociety/master
 
 <%= render :partial => 'sidebar' %>
 <div id="left_column_flip" class="left_column_flip">
 <h1 id="credits"><%= @title %> <a href="#credits">#</a> </h1>
 
-<p>Alaveteli, the software that powers <%= site_name %>, is a project of <a href="https://www.mysociety.org">mySociety</a>, a UK organisation. mySociety builds websites that empower citizens to hold authorities to account. And this is one of those sites.</p>
+<p>Alaveteli, softver koji pokreće <%= site_name %>, je projekt nevladine organizacije iz Velike Britanije &#8212; <a href="https://www.mysociety.org">mySociety</a>. Oni grade internetske stranice koje osnažuju građane u njihovim pravima. I ovo je jedna takva stranica.</p>
 
 <dl>
-<<<<<<< HEAD
 
 <dt id="thanks">Ljudi koji su omogućili <%= site_name %> <a href="#thanks">#</a> </dt>
 <dd>Eh, skoro svi (a možda i ti)! 
 <ul>
 <li>
-    <a href="http://twitter.com/darvvon">Mirolav Schlossberg</a>, voditelj <a href="http://open.hr">HrOpen</a> ekspertne skupine <a href="http://codeforcroatia.org">Programiraj za Hrvatsku</a>, za iniciranje, koordiniranje i u konačnici implementaciju aplikacije za ponošenje elektronskih prigovora.
+    <a href="http://twitter.com/darvvon">Mirolav Schlossberg</a>, voditelj <a href="http://open.hr">HrOpen</a> ekspertne skupine <a href="http://codeforcroatia.org">Programiraj za Hrvatsku</a>, za iniciranje, koordiniranje i u konačnici implementaciju ove internetske aplikacije za ponošenje elektronskih prigovora.
 </li>
 <li>
     Marin i Ivan Balabanić, osnivači udruge No-Me-Kultura za odličnu ideju i osnivanje portala Reklamacije.net.
@@ -47,46 +42,41 @@ Svi ste naše zvjezde.
  Hearty cheers to <a href="http://alaveteli.org/">Alaveteli</a>&rsquo;s many <a href="https://github.com/mysociety/alaveteli/graphs/contributors">contributors</a>.</p>
 </dd>
 
-<dt id="helpus">How to help <a href="#helpus">#</a></dt>
+<dt id="helpus">Mogu li i ja pomoći? <a href="#helpus">#</a> </dt>
 <dd>
-  <dt id="volunteer">Become a volunteer <a href="#volunteer">#</a></dt>
+  <dt id="volunteer">Postani volonter <a href="#volunteer">#</a></dt>
   <dd>
-    <p>If you have a passion for transparency, a great deal of patience, and a bit of spare time, consider becoming one of <%= site_name %>'s volunteer admin team. Work includes user support, helping to resolve legal issues, and shaping the site’s direction, and is primarily managed via email.</p>
-    <p>In the first instance, <%= link_to 'get in touch', help_contact_path %>.</p>
+    <p>Ako voliš pravednost i transparentnost, imaš puno strpljenja i imaš nešto malo slobodnog vremena &#8212; razmisli o tome da postaneš volonter u <%= site_name %> administratorksom timu. Njihov posao uključuje pomoć korisnicima, moderaciju komentara i prigovora, uključenost u planiranju razvoja internetske stranice. Sva komunikacija je elektronski, najčešće emailom ili putem chata.</p>
+    <p>Ako se vidiš kao član našeg tima, <%= link_to 'kontaktiraj nas', help_contact_path %>.</p>
+  </dd>
+  <dt id="donate">Doniraj nam <a href="#donate">#</a></dt>
+  <dd>
+    <p>HrOpen, krovna organizacija grupe Programiraj za Hrvatsku koja pokreće i održava <%= site_name %> je nevladina organizacija, udruga. Portal košta nekoliko tisuća kuna godišnje za redovne troškove poput servera i održavanja.</p>
+
+    <p>Tvoja donacija, koliko god mala, stvarno pomaže. <a href=<%= MySociety::Config.get('DONATION_URL', '') %>>Doniraj</a>.</p>
+  </dd>
+  <dt id="classification">Razvrstaj prigovore <a href="#classification">#</a></dt>
+  <dd>
+    <p>Moderacija može biti zabavna! Pomozi ljudima da pronađu neki prigovor, ili da provjere kvalitetu neke usluge ili robe  tako da<a href="<%= categorise_play_path %>">odigraš igru kategorizacije</a>.</p>
+
+    <p>Ili budi sunce i pronađi email adrese pravnih osoba za koje još <a href="<%= help_requesting_path(:anchor => 'missing_bodies') %>">nemamo kontakt</a>.</p>
   </dd>
 
-  <dt id="donate">Make a donation <a href="#donate">#</a></dt>
+  <dt id="promote">Raširi vijest <a href="#promote">#</a></dt>
   <dd>
-    <p>mySociety, Alaveteli's parent organisation, is a charity. WhatDoTheyKnow, our most-visited Alaveteli site, costs thousands of pounds each year, for overheads such as servers, maintenance and development.</p>
-
-    <p>Your contributions, however small, really help. <a href="https://www.mysociety.org/donate/">Donate here</a>.</p>
-  </dd>
-
-  <dt id="classification">Sort things out <a href="#classification">#</a></dt>
-  <dd>
-    <p>Admin can be fun! Help people find successful requests, and monitor performance of authorities, by <a href="<%= categorise_play_path %>">playing the categorisation game</a>.</p>
-
-    <p>Or be a dear, and find out FOI email addresses of <a href="<%= help_requesting_path(:anchor => 'missing_bodies') %>">authorities that we're missing</a>.</p>
-  </dd>
-
-  <dt id="promote">Spread the word <a href="#promote">#</a></dt>
-  <dd>
-    <p>We don’t have a massive marketing budget, so word of mouth really helps.</p>
+    <p>Nemamo proračun za marketinške svrhe, stoga ćemo ti biti zahvalni ako nas preporučiš dalje.</p>
       <ul>
-        <li>Write a blog post about <%= site_name %>, or an interesting request that you've found.</li>
-        <li>Post about the site, and what you can do with it, on a forum that you frequent.</li>
-        <li>Tell friends about it.</li>
-        <li>Let your local newspaper or community magazine know how useful we are.</li>
-        <li>Give a talk.</li>
-        <li><%= mail_to 'hello@mysociety.org', 'Ask us for leaflets', :encode => "javascript" %> to leave in your local library or coffee shop.</li>
+        <li>Napiši blog o portalu <%= site_name %> ili nekom zanimljivom prigovoru kojeg su podnjeli korisnici portala. 
+        <li>Postaj o portalu, i čemu služi na forumu kojeg često posjećuješ.</li>
+        <li>Reci prijateljima kako jednostavno mogu podnijeti svoje prigovore.</li>
+        <li>Upoznaj lokalne novine ili časopis lokalne zajednice o dobrim osobinama portala.</li>
       </ul>
   </dd>
->>>>>>> mysociety/master
 </dd>
 
-  <dt id="code">Improve our code <a href="#code">#</a></dt>
+  <dt id="code">Poboljšaj kod <a href="#code">#</a></dt>
   <dd>
-    <p>Seen something that could work better? If you're a programmer, <a href="https://github.com/mysociety/alaveteli/">get the source code</a> for our parent project, <a href="http://alaveteli.org/">Alaveteli</a> and send us a pull request. <%= site_name %> is coded in <a href="http://rubyonrails.org/">Ruby on Rails</a>.</p>
+    <p>Jesi li našao nešto što može raditi bolje? Ako si programer, <a href="https://github.com/mysociety/alaveteli/">pogledaj source code</a> glavnog projekta, <a href="http://alaveteli.org/">Alaveteli</a> i pošalji pull request. <%= site_name %> je programirana u <a href="http://rubyonrails.org/">Ruby on Rails</a>.</p>
   </dd>
 </dl>
 

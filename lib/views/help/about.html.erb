@@ -6,25 +6,17 @@
 <h1 id="introduction">O projektu <i><%= site_name %></i></i> <a href="#introduction">#</a> </h1>
 
 <p>
-Portal <i><%= site_name %></i> je kao središnje mjesto informiranja građana o potrošačkoj problematici, mjesto na kojom će korisnici portala, podnositelji pritužbi u suradnji s raznim stručnjacima, udrugama, institucijama ili tvrtkama nalaziti konstruktivna rješenja svojih problema.
+Portal <i><%= site_name %></i> je kao središnje mjesto informiranja građana o potrošačkoj problematici, mjesto na kojom će korisnici portala, podnositelji pritužbi u suradnji s raznim stručnjacima, udrugama, institucijama ili tvrtkama nalaziti konstruktivna rješenja svojih problema. <i><%= site_name %></i> omogućuje slanje prigovora određenom trgovcu ili drugoj pravnoj osobi.
 </p>
 <p>
 Jedno od temeljnih prava potrošača jest i pravo na informiranje na područja zaštite osnovnih prava potrošača - zaštitu ekonomskih interesa potrošača, zaštitu od opasnosti za život, zdravlje i imovinu, pravnu zaštitu potrošača, informiranje i edukaciju potrošača, udruživanje potrošača u svrhu zaštite njihovih interesa, predstavljanje potrošača i sudjelovanje predstavnika potrošača u radu tijela koja rješavaju pitanja od njihova interesa.
 </p>
 <p>
-Na jedinstvenom tržištu Europske unije vrijede ista pravila zaštite potrošača za sve njene državljane. U provedbi politike zaštite potrošača u Republici Hrvatskoj primjenjuju se standardi kao i u drugim državama članicama EU-a. Ministarstvo gospodarstva, poduzetništva i obrta je nositelj politike zaštite potrošača. U njeno provođenje uključena su i druga tijela javne vlasti, udruge za zaštitu potrošača, poslovna zajednica, strukovna udruženja, trgovci, akademska zajednica i sudbena vlast.
-</p>
-<p>
 Nadamo se da ćemo <i><%= site_name %></i> osnažiti potrošačko pravo na informiranje po svim područjima zaštite osnovnih  prava potrošača te ujedno ukazivati na probleme koji nas okružuju i doprinijeti njihovom rješavanju.
-</p>
-<p>
-News portal <i><%= site_name %></i> bavi se problematikom proizvoda i usluga na tržištu, a <i><%= site_name %></i> omogućuje slanje prigovora određenom trgovcu ili drugoj pravnoj osobi.
 </p>
 <p>
 S obzirom da ostvarenje prava na reklamaciju doprinosi većoj odgovornosti trgovaca i pružatelja usluga i kvaliteti robe i usluga koju pružaju, ono je važna pretpostavka za sva demokratska društva te sredstvo koje građanima pruža mogućnost da dođu do informacija koje su im potrebne za ostvarivanje njihovih prava. Nadamo se da ćemo, kako kvalitetnim sadržajem na portalu, tako i boljim povezivanjem potrošača i građana s trgovcima i javnim tijelima, značajno doprinijeti poboljšanju kvalitete proizvoda i usluga u Hrvatskoj.
 </p>
-
-<h1 id="portal"><i><%= site_name %></i> <a href="#portal">#</a> </h1>
 
 <dl>
 <dt id="purpose">Čemu služe <i><%= site_name %></i>? <a href="#purpose">#</a> </dt>
@@ -66,24 +58,310 @@ Naravno. Na portalu korisnici u sklopu njihovih prigovora pišu mnogo korisnih i
 
 <dt id="how_many">Koliko ljudi koristi internet za reklamacije? <a href="#how_many">#</a> </dt>
 <dd>
-Portal Reklamacije.net je od kraja 2008. do 2016. posjetilo više od 2 milijuna pojedinaca iz Hrvatske. Novi redizajnirani portal <i><%= site_name %></i> za izravno podnošenje prigovora putem interneta koristi <%= number_with_delimiter(User.count.round(-4), :locale => @locale) %> registriranih korisnika.
+Portal Reklamacije.net je od kraja 2008. do 2016. posjetilo više od 2 milijuna pojedinaca iz Hrvatske. <!-- Novi redizajnirani portal <i><%= site_name %></i> za izravno podnošenje prigovora putem interneta koristi <%= number_with_delimiter(User.count.round(-4), :locale => @locale) %> registriranih korisnika. -->
 </dd>
 
-<dt id="updates">Kako mogu pratiti novosti vezane uz <i><%= site_name %></i>? <a href="#updates">#</a> </dt>
+<dt id="updates">Kako mogu pratiti reklamacije? <a href="#updates">#</a> </dt>
 <dd>Sve nove reklamacije objavljuju se putem <a href="/feed/search/%20variety:sent">RSS feeda <i><%= site_name %></i></a>.
 </dd>
 
 <dt id="us">Tko uređuje <i><%= site_name %></i>? <a href="#us">#</a> </dt>
 <dd>
-<p>
-Portal uređuju i administriraju volonteri i članovi Programiraj za Hrvatsku. Ako ti se sviđa što radimo, možeš nam poslati donaciju.
-</p>
-<p>
-Ovaj portal uspostavlja i tehnički podržava <a href="http://codeforcroatia.org/">Programiraj za Hrvatsku</a>.
-</p>
+Portal uređuju, tehnički održavaju i administriraju volonteri i članovi <a href="http://codeforcroatia.org/">Programiraj za Hrvatsku</a>. Ako ti se sviđa što radimo, možeš nam poslati donaciju.
 </dd>
 <dt id="news">Mogu li pratiti <i><%= site_name %></i>?<a href="#news">#</a> </dt>
-    <dd>Pratiti nas možeš na Twitteru, Facebooku i putem RSS feeda stranice. Možeš pogledati na kojim novim projektima radimo na internetskim stranicama <a href="http://codeforcroatia.org">Programiraj za Hrvatsku</a>.
+<dd>Pratiti nas možeš na Twitteru, Facebooku i putem RSS feeda stranice. Možeš pogledati na kojim novim projektima radimo na internetskim stranicama <a href="http://codeforcroatia.org">Programiraj za Hrvatsku</a>.
+</dd>
+
+</dl>
+
+<h1 id="prava-potrosaca">Prava potrošača <a href="#prava-potrosaca">#</a> </h1>
+
+<dl>
+<dt id="rh">Zaštita potrošača u Republici Hrvatskoj <a href="#rh">#</a> </dt>
+<dd>
+<p>
+Na jedinstvenom tržištu Europske unije vrijede <strong>ista pravila zaštite potrošača za sve njene državljane</strong>. Zaštita potrošača u RH nije uređena na jedinstven i sustavan način. Temeljni i opći propis o zaštiti  potrošača  je  Zakon o zaštiti potrošača (ZZP),  koji  kao  rezultat  usklađivanja  s <i>acquis  communautaire</i> preuzima čitav niz EU direktiva u hrvatsko pravo. Iako se većina spomenutih EU direktiva odnosi na pojedine  ugovore  koje  sklapaju  potrošač  i  trgovac  ili  neke  njihove  važne  aspekte,  one nerijetko pored   privatnopravnih sadrže  i  uređuju  brojne  javnopravne  elemente,  što   se odražava i na ZZP. Ministarstvo gospodarstva, poduzetništva i obrta je nositelj politike zaštite potrošača. U njeno provođenje uključena su i druga tijela javne vlasti, udruge za zaštitu potrošača, poslovna zajednica, strukovna udruženja, trgovci, akademska zajednica i sudbena vlast.
+</p>
+<p>
+Politiku zaštite potrošača čini niz mjera kojima se pospješuju i štite interesi potrošača koji se na tržištu pojavljuju radi pribavljanja roba i usluga. Te mjere uključuju:
+<ul>
+<li>informiranje potrošača o svojstvima i cijeni robe i usluga</li>
+<li>educiranje potrošača o njihovim pravima i obvezama</li>
+<li>promicanje i podupiranje organiziranja potrošača kako bi mogli štititi svoja prava</li>
+<li>omogućivanje predstavnicima potrošača da sudjeluju u radu tijela koja odlučuju o njihovim pravima i obvezama.</li>
+</ul>
+Pravo zaštite potrošača sastoji se od pravnih pravila za zaštitu njihova zdravlja i sigurnosti te njihovih ekonomskih interesa. Pravo zaštite potrošača važno je zato što se njime štiti svakog pojedinca. <strong>Potrošač</strong> je svaka fizička osoba koja sklapa pravni posao ili djeluje na tržištu izvan svoje trgovačke, poslovne, obrtničke ili profesionalne djelatnosti. <strong>Trgovac</strong> je nasuprot tome bilo koja osoba koja sklapa pravni posao ili djeluje na tržištu u okviru svoje trgovačke, poslovne, obrtničke ili profesionalne djelatnosti, uključujući i osobu koja nastupa u ime ili za račun trgovca.
+</p>
+<p>
+Navedena dva subjekta svakodnevno ulaze u međusobne pravne odnose čime stječu određena prava i obveze, no njihov položaj se bitno razlikuje od onih koji sklapaju građanskopravne ili trgovačke ugovore. Element koji u potrošačkim ugovorima nedostaje jest ravnopravnost. Činjenica je da je potrošač slabija strana na tržištu te da trgovac raspolaže sa više znanja i informacija o proizvodima koje prodaje što može dovesti do neravnoteže na tržištu na štetu potrošača. Upravo zbog toga je zaštita potrošača nužna zadaća nacionalnog i europskog zakonodavstva. Današnji propisi pružaju visoku razinu zaštite pojedinca kao potrošača. Jedno od temeljnih prava koje se osigurava jest <i>pravo na informiranje i edukaciju</i> koje omogućuje potrošačima pristup potpunim i istinitim informacijama o proizvodu i usluzi koja se pruža tako da potrošač može donijeti odgovarajuću odluku o izboru i kupnji. <i>Pravo na sigurnost</i> obuhvaća pravo na kupovanje sigurnih proizvoda i usluga, a pravom na pritužbe potrošači mogu izraziti svoje nezadovoljstvo kupljenim proizvodom ili pruženom uslugom. U konačnici, potrošači se mogu udruživati i u interesne skupine te štititi svoja prava i na kolektivnoj razini pred sudom.
+</p>
+<p>
+Zaštita potrošača u Republici Hrvatskoj uređena je nizom zakona i podzakonskih akata. Najvažniji su:
+<ul>
+<li>Zakon o zaštiti potrošača (NN 79/07, 125/07)</li>
+<li>Zakon o obveznim odnosima (35/05)</li>
+<li>Zakon o općoj sigurnosti proizvoda (NN 30/09)</li>
+<li>Zakon o nedopuštenom oglašavanju (NN 43/09)</li>
+</p>
+<p>
+Ostali zakoni i podzakonski akti važni za zaštitu potrošača:
+<ul>
+ <li>Zakon o trgovini (NN 49/03 –pt, 103/03, 170/03, 55/04)</li>
+ <li>Zakon o bankama (NN 84/02, 141/06)</li>
+ <li>Zakon o leasingu (NN 135/06)</li>
+ <li>Zakon o osiguranju (NN 151/05)</li>
+ <li>Zakon o energiji (NN 68/01, 177/04, 76/07)</li>
+ <li>Zakon o regulaciji energetskih djelatnosti (NN 177/04, 76/07)</li>
+ <li>Zakon o tržištu električne energije (NN 177/04, 76/07)</li>
+ <li>Zakon o tržištu plina (NN 40/07)</li>
+ <li>Zakon o telekomunikacijama (NN 122/03, 158/03, 177/03, 60/04, 70/05)</li>
+ <li>Zakon o komunalnom gospodarstvu (NN 26/03-pt, 82/04, 110/04, 178/04)</li>
+ <li>Zakon o obrtu (NN 49/03-pt, 68/07, 79/07)</li>
+ <li>Zakon o državnom inspektoratu (NN 79/99, 129/05)</li>
+ <li>Zakon o tehničkim zahtjevima za proizvode i ocjeni sukladnosti (NN 158/03, 79/07)</li>
+ <li>Zakon o normizaciji (NN 163/03)</li>
+ <li>Zakon o hrani (NN 46/07)</li>
+ <li>Zakon o genetski modifi ciranim organizmima (NN 70/05)</li>
+ <li>Zakon o lijekovima (NN 71/07)</li>
+ <li>Odluka o jedinstvenoj metodi izračuna realne godišnje kamatne stope na potrošačke kredite (NN 30/05)</li>
+ <li>Uredba o sustavu razmjene obavijesti u pogledu proizvoda koji predstavljaju rizik za zdravlje i sigurnost potrošača (NN 138/06)</li>
+</ul>
+</p>
+</dd>
+
+<dt id="prava">Temeljna prava potrošača <a href="#prava">#</a> </dt>
+<dd>
+<p>Pravila o zaštiti potrošača snažno utječu na hrvatsku poslovnu zajednicu. Ona potrošačima pružaju zaštitu u pravnim odnosima u koje ulaze s trgovcima.</p>
+<p>
+Deset najvažnijih prava potrošača:
+<ol>
+<li>pravo na siguran proizvod i proizvod bez nedostatka</li>
+<li>pravo na popravak proizvoda za koji je dano jamstvo</li>
+<li>pravo na reklamaciju na materijalni nedostatak proizvoda</li>
+<li>pravo na popravak, zamjenu, povrat novca ili sniženje cijene za proizvod s nedostatkom</li>
+<li>pravo na podnošenje pisanog prigovora trgovcu, koji je dužan odgovoriti</li>
+<li>pravo na potpunu informaciju o proizvodu, cijeni proizvoda/usluge i uvjetima prodaje</li>
+<li>pravo na povrat sredstava od trgovca kod kupovine internetom, telefonom i ako potrošač raskida tako sklopljen ugovor</li>
+<li>pravo predomisliti se, u propisanom roku</li>
+<li>pravo na izvansudsko ili alternativno rješavanje potrošačkog spora</li>
+<li>pravo na podnošenje prijave tržišnoj inspekciji nakon što je potrošač iscrpio druge mogućnosti (pisani prigovor, odnosno reklamacija)</li>
+</ol>
+</p>
+</dd>
+
+<dt id="nedostaci">Zaštita potrošača kod materijalnih nedostataka stvari <a href="#nedostaci">#</a> </dt>
+<dd>
+<p>Temeljni cilj sklapanja potrošačkih ugovora jest da se potrošaču pruži odgovarajući proizvod ili usluga. Jedan od najčešćih problema za ispunjenje je postojanje određenih materijalnih nedostataka.</p>
+<p>
+<i>Materijalni nedostaci</i> postoje:
+<ul>
+<li>ako stvar nema potrebna svojstva za svoju redovitu uporabu ili za promet,</li>
+<li>ako stvar nema potrebna svojstva za posebnu uporabu za koju je kupac nabavlja, a koja je bila poznata prodavatelju ili mu je morala biti poznata,</li>
+<li>ako stvar nema potrebna svojstva za posebnu uporabu za koju je kupac nabavlja, a koja je bila poznata prodavatelju ili mu je morala biti poznata,</li>
+<li>ako stvar nema svojstva i odlike koje su izrijekom ili prešutno ugovorene, odnosno propisane,</li>
+<li>ako stvar nema svojstva koja inače postoje kod drugih stvari iste vrste i koja je kupac mogao opravdano očekivati prema naravi stvari, posebno uzimajući u obzir javne izjave prodavatelja, proizvođača i njihovih predstavnika o svojstvima stvari (reklame, označavanje stvari i dr.),</li>
+<li>ako je stvar nepravilno montirana pod uvjetom da je usluga montaže uključena u ispunjenje ugovora o prodaji,</li>
+<li>ako je nepravilna montaža posljedica nedostataka u uputama za montažu.</li>
+</ul></p>
+<p>U slučaju kršenja njegovih prava, pa tako i u ovom slučaju, potrošač može podnijeti <a href="/select_authority">pisani prigovor trgovcu</a>. Naime, obveza je trgovca da omogući potrošaču podnošenje pisanog prigovora u svojim poslovnim prostorijama te putem pošte, telefaksa ili elektroničke pošte[3]. Na podneseni prigovor on mora odgovoriti u pisanom obliku u roku od 15 dana. Ako trgovac pruža javnu uslugu (npr. prijevoz putnika u javnom prometu, distribucija električne energije, distribucija komunikacijskih usluga, itd.), dužan je osnovati i povjerenstvo za reklamacije potrošača, u kojem trebaju biti zastupljeni i predstavnici udruga za zaštitu potrošača kojem potrošač može uputiti i daljnji prigovor u slučaju nezadovoljstva njegovim odgovorom na pisani prigovor. Povjerenstvo mora pisano odgovoriti potrošačima na zaprimljene reklamacije u roku od 30 dana od dana zaprimanja.</p>
+<p>Kod postojanja materijalnih nedostataka, potrošač kao kupac nije obvezan pregledati stvar, ali je obvezan <stong>obavijestiti prodavatelja</stong> na opisani način o postojanju nedostataka (vidljivih i skrivenih) u roku od dva mjeseca od dana kad je otkrio nedostatak, a najkasnije u roku od dvije godine od prijelaza rizika na potrošača, tj. predaje stvari (makar trgovac u svojim prostorijama oglašava kraći rok). Kao dokaz svoje kupnje, kupac treba priložiti račun. Pretpostavlja se da je nedostatak postojao u vrijeme prijelaza rizika ako se pojavio u roku od šest mjeseci od prijelaza rizika, osim ako prodavatelj ne dokaže suprotno ili suprotno ne proizlazi iz naravi stvari ili naravi nedostatka (primjerice ako trgovac odbije prigovor navodeći da je sam kupac prouzročio nedostatak, bitan je trenutak pojave nedostatka. Ako se pojavio u roku od šest mjeseci od kupnje, teret dokazivanja da je kupac prouzročio nedostatak je na trgovcu, a ako se pojavio nakon tog roka, kupac je dužan dokazati da nije prouzročio nedostatak).</p>
+<p>Ako je pravodobno obavijestio prodavatelja, kupac <stong>može po svom izboru</stong>:
+<ul>
+<li>zahtijevati od prodavatelja da nedostatak ukloni</li>
+<li>zahtijevati od prodavatelja da mu preda drugu stvar bez nedostatka</li>
+<li>zahtijevati sniženje cijene</li>
+<li>izjaviti da raskida ugovor</li>
+</ul></p>
+<p>Bez obzira što je izabrao, kupac ima pravo i na popravljanje štete (naknada štete koja je uzrokovana nedostacima proizvoda). U slučaju da se radi o neznatnom nedostatku, kupac nema pravo na raskid ugovora, ali ima pravo izabrati između ostalih zakonskih mogućnosti. Ako kupac zahtijeva ispunjenje ugovora, prodavatelj je dužan ispuniti svoju obvezu u razumnom roku. Rok varira i ovisi o konkretnoj stvari i samim nedostacima. Troškove otklanjanja nedostatka i predaje druge stvari bez nedostatka snosi prodavatelj. Popravak ne smije stvoriti dodatne troškove kupcu. Ukoliko trgovac u razumnom roku ne popravi stvar odnosno ne preda novu, bez nedostataka, kupac zadržava pravo zahtijevati sniženje cijene ili raskid ugovora (povrat novca). Ako je kupac već ostvario sniženje cijene, a s vremenom se otkrije novi nedostatak, može zahtijevati novo sniženje ili raskinuti ugovor.</p>
+<p> Kupac ima sva navedena prava bez obzira da li je stvar kupio na sniženju, rasprodaji ili akciji. No, ako se proizvod prodaje po sniženoj cijeni od redovne zato jer ima grešku, a fizički je odvojen od drugih proizvoda te je jasno, vidljivo i čitljivo označeno da se radi o proizvodu sa greškom, kupac nema pravo na reklamaciju zbog materijalnog nedostatka jer se smatra da je s njim bio upoznat.</p>
+<p> Ukoliko kupljeni proizvod nema materijalnih nedostataka, ali je kupac nezadovoljan ili se jednostavno predomislio, može se obratiti trgovcu sa zamolbom da se proizvod zamijeni za drugi ili se vrati novac, no trgovac nije dužan istome i udovoljiti jer ne postoji takva zakonska obveza. Unatoč tome, trgovac može izaći u susret kupcu djelujući u skladu sa dobrom poslovnom praksom. Iznimka su proizvodi kupljeni izvan poslovnih prostorija trgovca te ugovori sklopljeni na daljinu gdje se potrošači dodatno štite zbog okolnosti u kojima su ti ugovori sklopljeni. Zakonom je određeno da potrošač ima pravo jednostrano raskinuti takav ugovor, ne navodeći razloge za to, u roku od 14 dana od sklapanja ugovora.</p>
+</dd>       
+
+<dt id="sigurnost">Pravo na visoku razinu zaštite zdravlja i sigurnosti <a href="#sigurnost">#</a> </dt>
+<dd>
+<p>Sigurnosni standardi EU-a ubrajaju se u najstrože na svijetu. Usklađivanjem s pravom 
+EU-a, oni postaju dio našeg pravnog poretka. Trgovci su ovlašteni stavljati na tržište
+samo proizvode koji zadovoljavaju visoke sigurnosne standarde utvrđene propisima
+tehničkog zakonodavstva i normama. Osim općih pravila o sigurnosti proizvoda, koja
+se primjenjuju na sve proizvode, posebni propisi predviđaju sigurnosne standarde za
+određene grupe proizvoda, kao što su igračke, kozmetika, električni uređaji i sl. Premda
+nijedan sustav sigurnosti ne može jamčiti potpunu sigurnost proizvoda odnosno odsutnost
+rizika za potrošače, europski sustav sigurnosti proizvoda predviđa mehanizme
+zaštite potrošača u slučaju nesigurnih proizvoda na tržištu. Oni će se u najkraćem
+mogućem roku povući s tržišta. Ako bi određeni potrošači bili oštećeni neispravnošću
+proizvoda, imat će pravo na naknadu štete prema posebnim pravilima o odgovornosti za
+neispravan proizvod.</p>
+<p><i>Siguran proizvod</i> je svaki proizvod koji u normalnim ili razumno predvidljivim uvjetima
+uporabe ne predstavlja nikakav rizik ili neznatan rizik spojiv s uporabom proizvoda te koji
+se smatra prihvatljivim i sukladnim s visokom razinom zaštite sigurnosti i zdravlja ljudi.
+Smatra se da je određeni proizvod siguran
+<ul>
+ <li>ako ispunjava zahtjeve tehničkih propisa, a ako nema odgovarajućih tehničkih propisa,</li>
+ <li>ako ispunjava zahtjeve hrvatskih norma kojima su preuzete europske norme.</li>
+</ul>
+</p>
+<p>Osim što imaju dužnost stavljati na tržište samo sigurne proizvode, proizvođači su dužni
+obavijestiti potrošače o uobičajenim i predvidljivim rizicima uporabe njihovog proizvoda.
+Ako proizvođači i distributeri znaju ili bi trebali znati da proizvod koji su stavili na tržište
+predstavlja za potrošače rizike nespojive s općim sigurnosnim zahtjevima, moraju odmah
+obavijestiti nadležna tijela i po potrebi proizvod povući s tržišta.</p>
+</dd>
+
+<dt id="obavijest">Pravo na obaviještenost <a href="#obavijest">#</a> </dt>
+<dd>
+<p>Kako bi mogao usporediti robu i usluge koje mu se nude na tržištu, kako bi mogao u potpunosti
+biti svjestan osnovnih karakteristika robe i usluge te biti upoznat sa svojim pravima
+i obvezama pri kupnji proizvoda ili usluge, potrošač mora od trgovca dobiti sve potrebne
+obavijesti. Pritom, dužnost obavještavanja potrošača obvezuje trgovca u predugovornom
+stadiju i u stadiju ispunjavanja ugovora. Propisima o zaštititi potrošača, a poglavito Zakonom
+o zaštititi potrošača, uređen je niz slučajeva u kojima su trgovci dužni dati potrošaču
+relevantne obavijesti. Zakonom su te informacije točno navedene.
+Trgovac je u svakom slučaju dužan obavijestiti potrošača o cijeni proizvoda ili usluge, osnovnim
+karakteristikama proizvoda ili usluge te ostalim uvjetima prodaje. Obavijesti moraju
+biti jasne, vidljive i čitljive.</p>
+<p>U pogledu svakog proizvoda, trgovac mora obavijestiti potrošača o:
+<ul>
+ <li>proizvođačkom nazivu proizvoda, imenu pod kojim se proizvod prodaje</li>
+ <li>tipu i modelu proizvoda te oznaci mjere proizvoda, ako je to bitno obilježje proizvoda</li>
+ <li>datumu proizvodnje i roku uporabe, ako je propisano</li>
+ <li>za domaće proizvode, nazivu i sjedištu proizvođača te zemlji podrijetla</li>
+ <li>za uvozne proizvode, nazivu i sjedištu uvoznika, nazivu proizvođača te zemlji podrijetla</li>
+</ul>
+</p>
+<p>Trgovac je također dužan obavijestiti potrošača o nekim posebnim pravima i obvezama
+koje potrošač ima na temelju ugovora, na primjer:
+<ul>
+ <li>pravo na jednostran, bezrazložni raskid ugovora</li>
+ <li>troškovima dostave proizvoda</li>
+ <li>načinu izračuna kamatne stope kod ugovora o zajmu.</li>
+</ul>
+</p>
+</dd>
+
+<dt id="raskid">Pravo na jednostran raskid ugovora <a href="#raskid">#</a> </dt>
+<dd>
+<p>Ponekad potrošač ima pravo jednostrano raskinuti ugovor, bez obzira na razloge. U slučaju
+da raskine ugovor, potrošač
+<ul>
+ <li>mora vratiti proizvod</li>
+ <li>ima pravo na povrat novca te</li>
+ <li>ne smije snositi nikakve negativne posljedice raskida (npr. naknada štete, ugovorna kazna, naknada za raskid ugovora i sl.).</li>
+</ul></p>
+<p>Pravo na jednostrani raskid ugovora potrošač ima u slučaju da:
+<ul>
+ <li>kupuje putem interneta, kataloga ili drugog sredstva daljinske komunikacije,</li>
+ <li>kupuje od akvizitera izvan poslovnih prostorija trgovca</li>
+ <li>sklapa ugovor o vremenski ograničenoj uporabi nekretnine (<i>timeshare</i> ugovor).</li>
+</ul></p>
+<p>Pravo na jednostrani raskid ugovora vremenski je ograničeno. Ovisno o situaciji, traje:
+<ul>
+ <li>7 dana, u slučaju ugovora sklopljenog na daljinu</li>
+ <li>14 dana u slučaju sklapanja ugovora izvan poslovnih prostorija trgovaca i distancijskog sklapanja potrošačkog ugovora o financijskim uslugama, sklapanja ugovora o <i>timeshareu</i>.</li>
+</ul>
+<p>U svakoj situaciji kad je Zakonom o zaštiti potrošača za potrošača predviđeno pravo na
+jednostrani raskid ugovora, trgovac mora obavijestiti potrošača o postojanju tog prava. Ako
+ga o tome ne obavijesti, pravo na bezrazložni raskid ugovora, kod sklapanja ugovora izvan
+poslovnih prostorija, neće biti vremenski ograničeno, dok će kod ugovora sklopljenih na
+daljinu, taj rok biti produžen na tri mjeseca od sklapanja ugovora. U slučaju spora, trgovac
+je dužan dokazati da je obavijestio potrošača o njegovom pravu na jednostrani raskid
+ugovora.
+</p>
+</dd>
+
+<dt id="unfair">Pravo na zaštitu od nepoštenih ugovornih odredaba <a href="#unfair">#</a> </dt>
+<dd>
+<p>Trgovac nema pravo zlorabiti svoje znanje, iskustvo i poslovnu vještinu kako bi obvezao
+potrošača nepoštenim ugovornim odredbama. U tom smislu, predvidi li, na primjer, trgovac
+u ugovoru
+<ul>
+ <li>da potrošač neće imati pravo na povrat predujma kojeg je platio i to unatoč činjenici da trgovac nije ispunio svoj dio obveze, ili</li>
+ <li>da potrošač neće imati pravo tražiti zamjenu kupljene stvari koja ima nedostatak,</li>
+ <li>takve će ugovorne odredbe biti ništetne te neće obvezivati potrošača. U tom slučaju, ostatak ugovora ostat će valjan, ako može opstati bez nepoštene ugovorne odredbe, a umjesto nepoštene ugovorne odredbe primjenjivat će se zakonsko pravilo.</li>
+</ul></p>
+<p>Nepoštenima će se, među ostalim, smatrati ugovorne odredbe kojima se:
+<ul>
+ <li>ograničava ili isključuje odgovornost trgovca za štetu uzrokovanu smrću ili tjelesnom ozljedom potrošača, ako je šteta posljedica štetne radnje trgovca</li>
+ <li>ograničava ili isključuje prava koja potrošač ima prema trgovcu ili nekoj trećoj osobi u slučaju potpunog ili djelomičnog neispunjenja ugovora</li>
+ <li>ovlašćuje trgovca na raskid ugovora na temelju njegove diskrecijske ocjene, dok isto pravo nije predviđeno i za potrošača</li>
+ <li>ovlašćuje trgovca da, u slučaju kada raskine ugovor, zadrži plaćeno za usluge koje još nije obavio.</li>
+</ul>
+</p>
+</dd>
+
+<dt id="sukladnost">Pravo na sukladnost kupljene robe s ugovorom <a href="#sukladnost">#</a> </dt>
+<dd>
+<p>Potrošač ima pravo zahtijevati da mu bude isporučena stvar koja je sukladna ugovoru
+odnosno koja je slobodna od materijalnih nedostataka. Ako stvar ne bi bila podobna za
+namjenu za koju je potrošač pribavlja odnosno ako na drugi način ne bi bila u skladu sa
+ugovorom, potrošač ima pravo
+<ul>
+ <li>zahtijevati predaju nove stvari bez nedostatka ili popravak stvari</li>
+ <li>zahtijevati sniženje cijene</li>
+ <li>raskinuti ugovor.</li>
+</ul></p>
+<p>To pravo potrošaču pripada u periodu od dvije godine od predaje stvari. Ova prava predstavljaju
+minimum pravne zaštite koja pripada potrošaču te se ona ne mogu ugovorom
+isključiti ili ograničiti. Želi li proizvođač ili trgovac, u slučaju da proizvod ima materijalni
+nedostatak, potrošaču pružiti više prava ili mu omogućiti pravnu zaštitu u dužem razdoblju,
+može to učiniti putem garancije.</p>
+</dd>
+
+<dt id="neposteno">Pravo na zaštitu od nepoštene poslovne prakse <a href="#neposteno">#</a> </dt>
+<dd>
+<p>Trgovac je dužan u odnosima s potrošačima postupati pošteno i korektno. Dužan je
+suzdržavati se od nepoštene poslovne prakse, što implicira suzdržavanje od uporabe
+prisile prema potrošaču ili bilo kojeg drugog oblika agresivne prakse te suzdržavanja od
+dovođenja potrošača u zabludu. Zakon o zaštiti potrošača nabraja niz slučajeva zabranjene
+zavaravajuće i agresivne poslovne prakse.</p>
+<p><i>Zavaravajuća poslovna praksa</i> uključuje među ostalim:
+<ul>
+ <li>isticanje zaštitnih znakova, znakova kvalitete ili sličnih znakova bez potrebnog odobrenja</li>
+ <li>pozivanje na kupnju proizvoda po određenoj cijeni, a zatim odbijanje da se kupcu pokaže oglašavani proizvod ili odbijanje prihvaćanja narudžbe potrošača, odnosno dostave proizvoda u razumnom roku, s namjerom promidžbe nekog drugog proizvoda</li>
+ <li>pokazivanje neispravnog primjerka proizvoda, s namjerom promidžbe nekog drugog proizvoda</li>
+ <li>iznošenje netočnih tvrdnji glede naravi i obujma rizika kojem bi mogla biti izložena osobna sigurnost potrošača ili članova njegove obitelji u slučaju da potrošač ne kupi proizvod.</li>
+</ul></p>
+<p><i>Agresivna poslovna praksa</i> uključuje među ostalim:
+<ul>
+ <li>stvaranje dojma da potrošač ne može napustiti poslovni prostor sve dok ne sklopi ugovor</li>
+ <li>posjećivanje potrošača u njegovu domu, ignorirajući pritom zahtjev potrošača da se napusti njegov dom ili da ga se više ne posjećuje</li>
+ <li>ustrajno i neželjeno komuniciranje s potrošačem putem telefona, telefaksa, elektroničke pošte ili drugog sredstva daljinske komunikacije.</li>
+</ul></p>
+<p>Primijeni li trgovac prema potrošaču neki oblik nepoštene poslovne prakse, bit će prekršajno odgovoran te će udruge za zaštitu potrošača imati pravo zahtijevati od nadležnih tijela da mu je zabrane.
+</p>
+</dd>
+
+<dt id="zastita">Pravo na učinkovitu pravnu zaštitu <a href="#zastita">#</a> </dt>
+<dd>
+<p>Zbog relativno male vrijednosti transakcije, potrošači se rijetko odlučuju na sudsku zaštitu
+svojih prava i neki ih trgovci zbog toga nekažnjeno krše. Stoga je udrugama za zaštitu
+potrošača dano pravo da pred nadležnim tijelima pokreću postupke kolektivne zaštite
+potrošača, kojima se od tih tijela zahtijeva da pojedinom trgovcu zabrane ponašanje kojim
+vrijeđa prava potrošača.</p>
+<p>Za potrošače su također predviđeni alternativni oblici pravne zaštite, poput mogućnosti
+pokretanja postupka protiv pojedinog trgovca pred sudovima časti HGK-a, HUP-a te HOK-a
+te postupka pred centrima za mirenje tih tijela.</p>
+<p>Nazor nad provedbom Zakona o zaštiti potrošača provodi državni inspektorat i ostali
+nadležni inspektori. U provedbi inspekcijskog nadzora, nadležni inspektor može:
+<ul>
+ <li>trgovcu privremeno zabraniti prodaju proizvoda i pružanje usluga</li>
+ <li>zabraniti korištenje nepoštene poslovne prakse</li>
+ <li>naložiti otklanjanje uočenih nedostataka u primjeni Zakona.</li>
+</ul></p>
+<p>Trgovac koji postupa suprotno Zakonu o zaštiti potrošača može biti prekršajno odgovoran
+biti kažnjen novčanom kaznom u iznosu od 10.000 do 200.000 kuna.
+</p>
+</dd>
+
+<dd>
+<p id="sources">Izvori: 
+<ul>
+<li>Ministarstvo gospodarstva, poduzetništva i obrta</li>
+<li>Ministarstvo gospodarstva, poduzetništva i obrta, Bizimpact, minivodič Zaštita potrošača, travanj 2009.</li>
+<li>Dr.sc. Emilia Mišćenić, znanstveni rad Usklađivanje prava zaštite potrošača u Republici Hrvatskoj</li>
+<li>Pravna klinika Pravnog fakulteta u Zagrebu, Zaštita potrošača kod materijalnih nedostataka stvari, od 22. travanja 2014.</li>
+</ul>
+</p>
 </dd>
 
 </dl>

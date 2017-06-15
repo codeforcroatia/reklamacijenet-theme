@@ -1,5 +1,4 @@
 <% if AlaveteliConfiguration::responsive_styling || params[:responsive] %>
-  <% unless @user and @user.is_pro? %>
     <div class="ms-header">
       <div class="ms-header__container">
         <div class="ms-header__logo">
@@ -7,7 +6,6 @@
         </div>
       </div>
     </div>
-  <% end %>
 <% end %>
 <div class="only-show-for-print">
   <p class="print-information">Printed from <%= request.original_url %> on <%= Time.zone.now.to_formatted_s(:long)  %></p>

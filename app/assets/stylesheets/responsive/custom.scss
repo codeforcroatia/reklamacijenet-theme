@@ -1,3 +1,12 @@
+
+$organization-banner: $color_black;
+$link-color: darken($color_blue, 20%);
+$body-font-color: $color_black;
+$body-bg: $color_off_white;
+$button-bg: $color_blue;
+$heading-color: $color_black;
+$font-family: 'Source Sans Pro', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+
 /* Mixin styles */
 
 /* Hide text when it's replaced by an image */
@@ -225,10 +234,9 @@ a.link_button_green_large {
   }
 }
 
-/* Header - CfC logo */
 
 .ms-header {
-  background-color: $mysociety-banner;
+  background-color: $organization-banner;
   @extend .clearfix;
 }
 
@@ -248,7 +256,7 @@ a.link_button_green_large {
   }
   line-height: 0;
   a{
-    background-color: $mysociety-banner;
+    background-color: $organization-banner;
     @extend .image-replacement;
     background-image: image-url("codeforcroatia-header_logo.png");
     @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {

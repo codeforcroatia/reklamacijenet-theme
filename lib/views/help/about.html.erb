@@ -3,19 +3,22 @@
 <%= render :partial => 'sidebar' %>
 
 <div id="left_column_flip" class="left_column_flip">
-<h1 id="introduction">O projektu Reklamacije.net</i> <a href="#introduction">#</a> </h1>
+<h1 id="introduction">O projektu <i><%= site_name %></i></i> <a href="#introduction">#</a> </h1>
 
 <p>
-Portal Reklamacije.net zamišljen je kao središnje mjesto informiranja građana o  potrošačkoj problematici, ali i kao mjesto na kojom će korisnici portala, podnositelji pritužbi, u suradnji s raznim stručnjacima, udrugama, institucijama ili tvrtkama nalaziti konstruktivna rješenja svojih problema.
+Portal <i><%= site_name %></i> je kao središnje mjesto informiranja građana o potrošačkoj problematici, mjesto na kojom će korisnici portala, podnositelji pritužbi u suradnji s raznim stručnjacima, udrugama, institucijama ili tvrtkama nalaziti konstruktivna rješenja svojih problema.
 </p>
 <p>
 Jedno od temeljnih prava potrošača jest i pravo na informiranje na područja zaštite osnovnih prava potrošača - zaštitu ekonomskih interesa potrošača, zaštitu od opasnosti za život, zdravlje i imovinu, pravnu zaštitu potrošača, informiranje i edukaciju potrošača, udruživanje potrošača u svrhu zaštite njihovih interesa, predstavljanje potrošača i sudjelovanje predstavnika potrošača u radu tijela koja rješavaju pitanja od njihova interesa.
 </p>
 <p>
-Nadamo se da ćemo Reklamacije.net osnažiti potrošačko pravo na informiranje po svim područjima zaštite osnovnih  prava potrošača te ujedno ukazivati na probleme koji nas okružuju i doprinijeti njihovom rješavanju.
+Na jedinstvenom tržištu Europske unije vrijede ista pravila zaštite potrošača za sve njene državljane. U provedbi politike zaštite potrošača u Republici Hrvatskoj primjenjuju se standardi kao i u drugim državama članicama EU-a. Ministarstvo gospodarstva, poduzetništva i obrta je nositelj politike zaštite potrošača. U njeno provođenje uključena su i druga tijela javne vlasti, udruge za zaštitu potrošača, poslovna zajednica, strukovna udruženja, trgovci, akademska zajednica i sudbena vlast.
 </p>
 <p>
-News portal Reklamacije.net bavi se problematikom proizvoda i usluga na tržištu, a <i><%= site_name %></i> omogućuje slanje prigovora određenom trgovcu ili drugoj pravnoj osobi.
+Nadamo se da ćemo <i><%= site_name %></i> osnažiti potrošačko pravo na informiranje po svim područjima zaštite osnovnih  prava potrošača te ujedno ukazivati na probleme koji nas okružuju i doprinijeti njihovom rješavanju.
+</p>
+<p>
+News portal <i><%= site_name %></i> bavi se problematikom proizvoda i usluga na tržištu, a <i><%= site_name %></i> omogućuje slanje prigovora određenom trgovcu ili drugoj pravnoj osobi.
 </p>
 <p>
 S obzirom da ostvarenje prava na reklamaciju doprinosi većoj odgovornosti trgovaca i pružatelja usluga i kvaliteti robe i usluga koju pružaju, ono je važna pretpostavka za sva demokratska društva te sredstvo koje građanima pruža mogućnost da dođu do informacija koje su im potrebne za ostvarivanje njihovih prava. Nadamo se da ćemo, kako kvalitetnim sadržajem na portalu, tako i boljim povezivanjem potrošača i građana s trgovcima i javnim tijelima, značajno doprinijeti poboljšanju kvalitete proizvoda i usluga u Hrvatskoj.
@@ -38,7 +41,12 @@ Pronađite trgovca ili tijelo javne vlasti kojemu želite uputiti prigovor, te p
 
 <dt id="whybother_me">Zašto bi se uopće zamarali ovime? <a href="#whybother_me">#</a> </dt>
 <dd>
-Osobno se nadamo da ćemo ovim projektom osnažiti potrošačko pravo na informiranje po svim područjima zaštite osnovnih prava potrošača te ujedno ukazivati na probleme koji nas okružuju i doprinijeti njihovom rješavanju. Također, javnim objavljivanjem vlastitog slučaja reklamacije pružate mogućnosti i drugim potrošačima da se upoznaju s vašim slučajem i ukoliko imate valjanje argumente društveno odgovorni trgovci i tijela javne vlasti potruditi će se kvalitetno riješiti Vaš slučaj. 
+<p>
+Osobno se nadamo da ćemo ovim projektom osnažiti potrošačko pravo na informiranje po svim područjima zaštite osnovnih prava potrošača te ujedno ukazivati na probleme koji nas okružuju i doprinijeti njihovom rješavanju. Također, javnim objavljivanjem vlastitog slučaja reklamacije pružate mogućnosti i drugim potrošačima da se upoznaju s vašim slučajem i ukoliko imate valjanje argumente društveno odgovorni trgovci i tijela javne vlasti potruditi će se kvalitetno riješiti Vaš slučaj.
+</p>
+<p>
+Povjerenje potrošača izravno utječe na trgovce. Stoga razvijamo i potičemo dobru poslovnu trgovačku praksu. Danas trgovci u svoju poslovnu politiku ugrađuju visoke standarde zaštite prava potrošača kao dodanu vrijednost poslovanja društva jer to povećava njihovu konkurentnost.
+</p>
 </dd>
 
 <dt id="whybother_them">Zašto bi poduzeća i javna tijela uopće odgovarale na prigovore? <a href="#whybother_them">#</a> </dt>
@@ -62,20 +70,20 @@ Portal Reklamacije.net je od kraja 2008. do 2016. posjetilo više od 2 milijuna 
 </dd>
 
 <dt id="updates">Kako mogu pratiti novosti vezane uz <i><%= site_name %></i>? <a href="#updates">#</a> </dt>
-<dd>Sve novosti su objavljenje na <a href="http://www.twitter.com/whatdotheyknow">potrošačkom portalu Reklamacije.net</a>.
+<dd>Sve nove reklamacije objavljuju se putem <a href="/feed/search/%20variety:sent">RSS feeda <i><%= site_name %></i></a>.
 </dd>
 
 <dt id="us">Tko uređuje <i><%= site_name %></i>? <a href="#us">#</a> </dt>
 <dd>
 <p>
-Portal uređuju i administriraju volonteri i članovi Code for Croatia. Ako ti se sviđa što radimo, možeš nam <a href=<%= AlaveteliConfiguration::Config.get('DONATION_URL', '') %>>poslati donaciju</a>.<% end %>.
+Portal uređuju i administriraju volonteri i članovi Programiraj za Hrvatsku. Ako ti se sviđa što radimo, možeš nam poslati donaciju.
 </p>
 <p>
-Ovaj portal uspostavlja i tehnički podržava <a href="http://codeforcroatia.org/">Code for Croatia</a>.
+Ovaj portal uspostavlja i tehnički podržava <a href="http://codeforcroatia.org/">Programiraj za Hrvatsku</a>.
 </p>
 </dd>
-<dt id="updates">Mogu li pratiti <%= site_name %>?<a href="#updates">#</a> </dt>
-    <dd>Pratiti nas možeš na <% unless AlaveteliConfiguration::twitter_username.blank? %>Twitteru (<a href="https://twitter.com/<%= AlaveteliConfiguration::twitter_username %>" class="social-link social-link--twitter">@<%= AlaveteliConfiguration::twitter_username %></a>)<% end %> <% unless AlaveteliConfiguration::facebook_username.blank? %>i Facebooku (<a href="https://facebook.com/<%= AlaveteliConfiguration::facebook_username %>" class="social-link social-link--facebook">/<%= AlaveteliConfiguration::facebook_username %></a>)<% end %>.
+<dt id="news">Mogu li pratiti <i><%= site_name %></i>?<a href="#news">#</a> </dt>
+    <dd>Pratiti nas možeš na Twitteru, Facebooku i putem RSS feeda stranice. Možeš pogledati na kojim novim projektima radimo na internetskim stranicama <a href="http://codeforcroatia.org">Programiraj za Hrvatsku</a>.
 </dd>
 
 </dl>

@@ -23,15 +23,14 @@
 
     <% end %>
 
-    <h2>Kontaktirajte <%= site_name %> tim</h2>
+    <h2>Kontaktirajte <i><%= site_name %></i> tim</h2>
     <% if !flash[:notice] %>
             <ul>
             <li>
             Prije slanja upita o ovom portalu, prvo pročitajte <a href="<%= help_about_path %>">stranice za pomoć</a>, jer ćete tako možda brže doći do odgovora koji tražite.
             </li>
 
-            <li>Za sva ostala pitanja kontaktirajte nas putem obrasca niže ili putem sljedeće mail adrese <a
-               href="mailto:<%=@contact_email%>"><%=@contact_email%></a>.
+            <li>Za sva ostala pitanja pišite nam na <a href="http://diskurs.open.hr/">Diskurs forumu</a>.
             </li>
             </ul>
     <% end %>

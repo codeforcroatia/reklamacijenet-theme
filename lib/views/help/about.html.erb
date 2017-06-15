@@ -68,14 +68,14 @@ Portal Reklamacije.net je od kraja 2008. do 2016. posjetilo više od 2 milijuna 
 <dt id="us">Tko uređuje <i><%= site_name %></i>? <a href="#us">#</a> </dt>
 <dd>
 <p>
-Portal uređuju i administriraju volonteri i članovi Code for Croatia. Ako ti se sviđa što radimo, možeš nam <a href=<%= MySociety::Config.get('DONATION_URL', '') %>>poslati donaciju</a>.<% end %>.
+Portal uređuju i administriraju volonteri i članovi Code for Croatia. Ako ti se sviđa što radimo, možeš nam <a href=<%= AlaveteliConfiguration::Config.get('DONATION_URL', '') %>>poslati donaciju</a>.<% end %>.
 </p>
 <p>
 Ovaj portal uspostavlja i tehnički podržava <a href="http://codeforcroatia.org/">Code for Croatia</a>.
 </p>
 </dd>
 <dt id="updates">Mogu li pratiti <%= site_name %>?<a href="#updates">#</a> </dt>
-    <dd>Pratiti nas možeš na <% if !MySociety::Config.get('FACEBOOK_USERNAME', '').empty? %> <a href=https://facebook.com/<%= MySociety::Config.get('FACEBOOK_USERNAME', '') %>> Facebooku</a><% end %> <% if !MySociety::Config.get('TWITTER_USERNAME', '').empty? %> i <a href=https://twitter.com/<%= MySociety::Config.get('TWITTER_USERNAME', '') %>>Twitteru</a><% end %>.
+    <dd>Pratiti nas možeš na <% unless AlaveteliConfiguration::twitter_username.blank? %>Twitteru (<a href="https://twitter.com/<%= AlaveteliConfiguration::twitter_username %>" class="social-link social-link--twitter">@<%= AlaveteliConfiguration::twitter_username %></a>)<% end %> <% unless AlaveteliConfiguration::facebook_username.blank? %>i Facebooku (<a href="https://facebook.com/<%= AlaveteliConfiguration::facebook_username %>" class="social-link social-link--facebook">/<%= AlaveteliConfiguration::facebook_username %></a>)<% end %>.
 </dd>
 
 </dl>

@@ -23,8 +23,13 @@
   <div id="right_column" class="right_column" role="complementary">
     <div class="act_link">
       <h2><%= _("Stay up to date") %></h2>
-      <%= image_tag "twitter.png", :alt => "twitter icon", :class => "twitter-icon" %> <a href="https://twitter.com/<%= @twitter_user %>"><%= _("Follow us on twitter") %></a><br/><br/>
-      <%= image_tag "feed-16.png", :alt => "RSS icon" %> <a href="<%= @feed_url %>"><%= _("Subscribe to blog") %></a>
+      <% unless AlaveteliConfiguration::twitter_username.blank? %>
+      <%= image_tag "twitter.png", :alt => "twitter icon", :class => "twitter-icon" %> <a href="https://twitter.com/<%= @twitter_user %>"><%= _("Follow us on twitter") %></a><br/>
+      <% end %>
+      <% unless AlaveteliConfiguration::facebook_username.blank? %>
+       <a href="https://facebook.com/<%= AlaveteliConfiguration::facebook_username %>" class="social-link social-link--facebook"><%= _("Follow us on facebook") %></a><br/>
+      <% end %>
+      <%= image_tag "feed-16.png", :alt => "RSS icon" :class => "twitter-icon" %> <a href="<%= @feed_url %>"><%= _("Subscribe to blog") %></a>
     </div>
     <% if AlaveteliConfiguration::twitter_widget_id %>
       <div id="twitter" class="twitter">
@@ -32,9 +37,8 @@
         <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
       </div>
     <% end %>
-    <% if AlaveteliConfiguration::facebook_username %>
-      <div>
-        <p>Facebook widget</p>
+    <% unless AlaveteliConfiguration::facebook_username.blank? %>
+       <div class="fb-page" data-href="https://www.facebook.com/<%= AlaveteliConfiguration::facebook_username %>/" data-tabs="timeline" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/<%= AlaveteliConfiguration::facebook_username %>/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/<%= AlaveteliConfiguration::facebook_username %>/"><%= site_name %></a></blockquote>
       </div>
     <% end %>
   </div>

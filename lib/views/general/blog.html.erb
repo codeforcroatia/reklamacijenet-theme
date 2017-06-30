@@ -2,6 +2,7 @@
 
 <div id="left_column" class="left_column">
   <h1><%=@title %></h1>
+  <p>Novosti Ministarstva gospodarstva, poduzetništva i obrta iz područja zaštite potrošača.</p>
 
   <div id="blog" class="blog">
     <% @blog_items.each do |item| %>
@@ -23,8 +24,6 @@
   <div id="right_column" class="right_column" role="complementary">
     <div class="act_link">
       <h2><%= _("Stay up to date") %></h2>
-      <a href="https://twitter.com/<%= AlaveteliConfiguration::twitter_username %>" class="social-link social-link--twitter"><%= _("Follow us on twitter") %></a><br>
-      <a href="https://facebook.com/<%= AlaveteliConfiguration::facebook_username %>" class="social-link social-link--facebook"><%= _("Follow us on facebook") %></a><br>
       <%= image_tag "feed-16.png", :alt => "RSS icon" %> <a href="<%= @feed_url %>"><%= _("Subscribe to blog") %></a>
     </div>
     <% if AlaveteliConfiguration::twitter_widget_id %>

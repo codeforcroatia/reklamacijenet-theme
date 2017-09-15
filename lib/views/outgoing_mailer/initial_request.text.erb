@@ -4,7 +4,8 @@
 
 <%= _('Trgovac treba izvršiti popravak proizvoda ili usluge. Ukoliko isti nije u mogućnosti popraviti, trgovac treba ponuditi potrošaču drugi ispravan proiz­vod, ili izvršiti povrat pune plaćene cijene. Trgovac je dužan u pisanom obliku odgovoriti na prigovore u roku od 15 dana od dana zaprimljenog prigovora.') %>
 
-<%= _('Pisani odgovor dostavite na adresu e-pošte: {{reply_email}}', :reply_email => @info_request.incoming_email) %>
+<%= _('Pisani odgovor dostavite na adresu e-pošte: {{reply_email}}', 
+      :reply_email => @info_request.incoming_email) %>
 
 <%= _('Ovo je pisani prigovor potrošača dostavljen putem {{site_name}} internetske stranice.', :site_name => site_name) %>
 

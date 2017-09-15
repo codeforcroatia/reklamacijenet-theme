@@ -8,7 +8,11 @@
 
 <%= _('Ovo je pisani prigovor potrošača dostavljen putem {{site_name}} internetske stranice.', :site_name => site_name) %>
 
-<%= _('Je li {{email_address}} pogrešna adresa za podnošenje prigovora za {{public_body_name}}? Dojavite promjenu adrese putem sljedećeg linka: ', :email_address => @info_request.public_body.request_email, :type_of_request =>  @info_request.law_used_human(:full), :public_body_name => @info_request.public_body.name)%> <%= new_change_request_url(:body => @info_request.public_body.url_name) %>
+<%= _('Je li {{email_address}} pogrešna adresa za podnošenje prigovora za {{public_body_name}}? Dojavite promjenu adrese putem sljedećeg linka: ', 
+       :email_address => @info_request.public_body.request_email, 
+       :type_of_request =>  @info_request.law_used_human(:full), 
+       :public_body_name => @info_request.public_body.name)%> 
+       <%= new_change_request_url(:body => @info_request.public_body.url_name) %>
 
 <%= render :partial => 'followup_footer' %>
 

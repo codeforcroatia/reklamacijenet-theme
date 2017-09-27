@@ -82,7 +82,7 @@ form input[type="number"] {
     background-color: $form_input-bg;
     /* Set a fixed height for text inputs in older IE 8 */
     @include ie8{
-    /*    height: 2.3125em; */
+        height: 2.3125em;
     }
     /* Do the same in px for IE < 7 */
     @include lte-ie7{
@@ -1637,3 +1637,8 @@ a.mfb-link {
  */
 
 /*# sourceMappingURL=mfb.css.map */
+
+
+.navigation_search_button {
+    height: 1.875em;
+}

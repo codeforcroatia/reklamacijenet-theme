@@ -1080,7 +1080,7 @@ dt {
     #BUTTONS | Base
 \*------------------------------------*/
 .mfb-component__button--main, .mfb-component__button--child {
-  background-color: #E40A5D;
+  background-color: #a94ca6;
   display: inline-block;
   position: relative;
   border: none;
@@ -1616,6 +1616,11 @@ dt {
  * This part is where unfinished code should stay.
  * When a feature is ready(sh) move these styles to their proper place.
  */
+
+a.mfb-link { 
+    all: initial;
+}
+
 /*------------------------------------*\
     #DEVELOPMENT | Debuggers
 \*------------------------------------*/

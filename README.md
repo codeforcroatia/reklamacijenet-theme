@@ -28,3 +28,10 @@ To run tests, in the Alaveteli Rails.root (with this theme installed):
 
 
 Copyright (c) 2011 mySociety, released under the MIT license
+
+## Additional plugins:
+
+This theme also includes these features
+
+- Facebook quote plugin ([description][https://developers.facebook.com/docs/plugins/quote/])
+- Floating buttons ([repo][https://github.com/nobitagit/material-floating-button])

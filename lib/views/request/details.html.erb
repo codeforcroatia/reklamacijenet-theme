@@ -45,12 +45,12 @@
         &nbsp;<%=h info_request_event.send(column) %>
       </td>
     <% end %>
-    <td data-label="link">
+    <td data-label="link">&nbsp;
     <% if info_request_event.outgoing_message %>
-      &nbsp;<%= link_to "outgoing", outgoing_message_path(info_request_event.outgoing_message) %>
+      <%= link_to "outgoing", outgoing_message_path(info_request_event.outgoing_message) %>
     <% end %>
     <% if info_request_event.incoming_message %>
-      &nbsp;<%= link_to "incoming", incoming_message_path(info_request_event.incoming_message) %>
+      <%= link_to "incoming", incoming_message_path(info_request_event.incoming_message) %>
     <% end %>
     </td>
     </tr>

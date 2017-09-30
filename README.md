@@ -33,5 +33,5 @@ Copyright (c) 2011 mySociety, released under the MIT license
 
 This theme also includes these features
 
-- Facebook quote plugin ([description][https://developers.facebook.com/docs/plugins/quote/])
-- Floating buttons ([repo][https://github.com/nobitagit/material-floating-button])
+- Facebook quote plugin ([description](https://developers.facebook.com/docs/plugins/quote/))
+- Floating buttons ([repo](https://github.com/nobitagit/material-floating-button))

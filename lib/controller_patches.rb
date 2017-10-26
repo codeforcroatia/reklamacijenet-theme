@@ -17,4 +17,12 @@ Rails.configuration.to_prepare do
   #   def help_out
   #   end
   # end
+  # Disabling all_authorities.csv download (Louise)
+  PublicBodyController.class_eval do
+
+    def list_all_csv
+      raise ActiveRecord::RecordNotFound
+    end
+
+  end
 end

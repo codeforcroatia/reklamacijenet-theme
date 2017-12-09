@@ -2,7 +2,8 @@
 
 
 <% if !@info_request.nil? %>
-<h3>Nezadovoljni ste odgovorom koji ste dobili za '<%=request_link(@info_request) %>'?
+<h3>Nezadovoljni ste odgovorom koji ste 
+	dobili za '<%=request_link(@info_request) %>'?
 </h3>
 <% else %>
 <h3>Nezadovoljni ste dobivenim odgovorom na prigovor?</h3>
@@ -43,7 +44,9 @@ U tom slučaju treba poduzeti sljedeće:
 
 <ol>
 <% if !@info_request.nil? %>
-    <li><%= link_to "Pošaljite drugostupanjsku žalbu", show_response_no_followup_path(:id => @info_request.id, :incoming_message_id => nil) + "?internal_review=1#followup", :class => 'link_button_green' %> putem <i><%= site_name %></i>.</li>
+    <li><%= link_to "Pošaljite drugostupanjsku žalbu", 
+    show_response_no_followup_url(:id => @info_request.id, :
+    incoming_message_id => nil) + "?internal_review=1#followup" %> putem <i><%= site_name %></i>.</li>
 <% else %>
     <li>Ispod prigovora na stranici <i><%= site_name %></i>, pronađite i kliknite na poveznicu <strong>napišite drugostupanjsku žalbu</strong>.</li>
 <% end %>

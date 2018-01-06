@@ -295,8 +295,21 @@ a.link_button_green_large {
       }
     }
   }
+  
+  /* Make search box smaller */  
+  #navigation_search input {
+      padding-left: 0.9375rem;
+      padding-right: 0.9375rem;
+      width: 65%;
+      float: left;
+      margin-right: 0;
+  }
+ 
+  input.navigation_search_button {
+      height: 1.5em;
+  }
 
-  /* Vertically align the label image for older IE*/
+  /* Vertically align the label image for older IE */
   @include ie8 {
     img {
       margin-top: 0.626em;
